@@ -11,13 +11,7 @@ Ember.MODEL_FACTORY_INJECTIONS = true;
 App = Ember.Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
-  Resolver,
-
-  ready: function() {
-	Ember.$(".dropDownButton").click( function() {
-	Ember.$('.rightDropDownMenu').removeClass("invisible");
-	});  	
-  }
+  Resolver
 });
 
 

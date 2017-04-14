@@ -1,0 +1,60 @@
+<div class="navigationMenu desktop">
+	<div class="leftMenu">
+		<ul class="leftMenuNav">
+			{{#link-to 'index'}}
+			<li>Home</li>
+			{{/link-to}}
+			{{#link-to 'about'}}
+			<li>About</li>
+			{{/link-to}}
+			<li><a href="#">left link 3</a></li>
+		</ul>
+	</div>
+	<div class="rightMenu">
+		<div {{action "toggleMenu"}} class="dropDownButton">
+			<p>
+				menu 
+				{{#if isShowMenu}}
+				<i class="fa fa-caret-up" aria-hidden="true"></i>
+				{{else}}
+				<i class="fa fa-caret-down" aria-hidden="true"></i>
+				{{/if}}
+			</p>
+		</div>
+		{{#if isShowMenu}}
+		<ul class="rightDropDownMenu">
+			<li><a href="#">right link 1</a></li>
+			<li><a href="#">right link 2</a></li>
+			<li><a href="#">right link 3</a></li>
+
+		</ul>
+		{{/if}}
+	</div>
+</div>
+<div class="navigationMenu mobile"> 
+	<div class="rightMenu">
+		<div {{action "toggleMenu"}} class="dropDownButton">
+			{{#if isShowMenu}}
+			X
+			{{else}}
+			<i class="fa fa-bars" aria-hidden="true"></i>
+			{{/if}}
+		</div>
+		{{#if isShowMenu}}
+		<ul class="rightDropDownMenu">
+			{{#link-to 'index'}}
+			<li>Home</li>
+			{{/link-to}}
+			{{#link-to 'about'}}
+			<li>About</li>
+			{{/link-to}}
+			<li><a href="#">left link 3</a></li>
+			<li><a href="#">right link 1</a></li>
+			<li><a href="#">right link 2</a></li>
+			<li><a href="#">right link 3</a></li>
+
+		</ul>
+		{{/if}}
+	</div>
+	
+</div>
